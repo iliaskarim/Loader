@@ -41,7 +41,10 @@ private struct Loader: View {
         .offset(CGSize(width: isAnimating ? -(size * 2.0) : 0.0, height: 0.0))
         .animation(isAnimating ? Animation.linear(duration: duration).repeatForever(autoreverses: false) : .default, value: isAnimating)
       }
-    }.frame(height: size)
+    }
+    .cornerRadius(size / 2.0)
+    .frame(height: size)
+    .padding()
   }
 }
 
